@@ -13,6 +13,10 @@ const parameters = {
 
 gui
     .addColor(parameters, 'materialColor')
+    .onChange(() =>
+    {
+        material.color.set(parameters.materialColor)
+    })
 
 /**
  * Base
@@ -26,8 +30,17 @@ const scene = new THREE.Scene()
 /**
  * Objects
  */
+// Texture
+const textureLoader = new THREE.TextureLoader()
+const gradientTexture = textureLoader.load('textures/gradients/3.jpg')
+gradientTexture.magFilter = THREE.NearestFilter
+
 // Material
-const material = new THREE.MeshToonMaterial({ color: parameters.materialColor })
+const material = new THREE.MeshToonMaterial({
+    color: parameters.materialColor,
+    gradientMap: gradientTexture
+
+})
 // Meshes
 const mesh1 = new THREE.Mesh(
     new THREE.TorusGeometry(1, 0.4, 16, 60),
@@ -43,6 +56,13 @@ material
 )
 
 scene.add(mesh1, mesh2, mesh3)
+
+/**
+ * Lights
+ */
+const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
+directionalLight.position.set(1, 1, 0)
+scene.add(directionalLight)
 
 /**
  * Sizes
