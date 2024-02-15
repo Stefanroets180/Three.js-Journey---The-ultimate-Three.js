@@ -8,10 +8,10 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "vite": "^5.0.12"
+    "vite": "^4.0.4"
   },
   "dependencies": {
-    "lil-gui": "^0.19.1",
-    "three": "^0.161.0"
+    "lil-gui": "^0.17.0",
+    "three": "^0.148.0"
   }
 }
