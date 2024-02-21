@@ -1,5 +1,11 @@
 varying vec2 vUv;
 
+// Pattern 23
+float random(vec2 st)
+{
+    return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+}
+
 
 void main()
 {
@@ -82,13 +88,8 @@ void main()
     // float strength = floor(vUv.x * 10.0) / 10.0 * floor(vUv.y * 10.0) / 10.0;
 
     // Pattern 23
-    // float random(vec2 st)
-    // {
-    //    return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
-    //  }
-    //
-    //  void main()
-    //  {
+    float strength = random(vUv);
+
 
     // Pattern 24
 
