@@ -1,6 +1,6 @@
 varying vec2 vUv;
 
-// Pattern 23
+// Pattern 23-24-25-26-27-28-29-30-31
 float random(vec2 st)
 {
     return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
@@ -88,24 +88,34 @@ void main()
     // float strength = floor(vUv.x * 10.0) / 10.0 * floor(vUv.y * 10.0) / 10.0;
 
     // Pattern 23
-    float strength = random(vUv);
-
+    //float strength = random(vUv);
 
     // Pattern 24
+    // vec2 gridUv = vec2(floor(vUv.x * 10.0) / 10.0, floor(vUv.y * 10.0) / 10.0);
+    // float strength = random(gridUv);
 
     // Pattern 25
+    // vec2 gridUv = vec2(floor(vUv.x * 10.0) / 10.0, floor((vUv.y + vUv.x * 0.5) * 10.0) / 10.0);
+    // float strength = random(gridUv);
 
     // Pattern 26
+    // float strength = length(vUv);
 
     // Pattern 27
+    // float strength = distance(vUv, vec2(0.5));
 
     // Pattern 28
+    // float strength = 1.0 - distance(vUv, vec2(0.5));
 
     // Pattern 29
+    // float strength = 0.015 / (distance(vUv, vec2(0.5)));
 
     // Pattern 30
+    // float strength = 0.15 / (distance(vec2(vUv.x, (vUv.y - 0.5) * 5.0 + 0.5), vec2(0.5)));
 
     // Pattern 31
+    // float strength = 0.15 / (distance(vec2(vUv.x, (vUv.y - 0.5) * 5.0 + 0.5), vec2(0.5)));
+    // strength *= 0.15 / (distance(vec2(vUv.y, (vUv.x - 0.5) * 5.0 + 0.5), vec2(0.5)));
 
     // Pattern 32
 
