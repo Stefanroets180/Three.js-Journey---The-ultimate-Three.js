@@ -1,3 +1,5 @@
+uniform float uSize;
+
 void main()
 {
     /**
@@ -11,5 +13,5 @@ void main()
     /**
      * Size
      */
-    gl_PointSize = 2.0;
+    gl_PointSize = uSize;
 }
