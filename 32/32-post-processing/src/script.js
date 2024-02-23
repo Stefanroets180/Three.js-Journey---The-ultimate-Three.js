@@ -172,7 +172,7 @@ effectComposer.addPass(dotScreenPass)
 
 // Glitch pass
 const glitchPass = new GlitchPass()
-glitchPass.goWild = true
+glitchPass.goWild = false
 glitchPass.enabled = false
 effectComposer.addPass(glitchPass)
 
