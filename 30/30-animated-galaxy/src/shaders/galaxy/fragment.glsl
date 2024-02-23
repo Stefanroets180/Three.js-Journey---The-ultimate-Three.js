@@ -13,9 +13,9 @@ void main()
     // strength = 1.0 - strength;
 
     // Light point
-    float strength = distance(gl_PointCoord, vec2(0.5));
-    strength = 1.07 - strength;
-    strength = pow(strength, 8.0);
+    float strength = distance(gl_PointCoord, vec2(0.3));
+    strength = 1.0 - strength;
+    strength = pow(strength, 10.0);
 
     // Final color
     vec3 color = mix(vec3(0.0), vColor, strength);

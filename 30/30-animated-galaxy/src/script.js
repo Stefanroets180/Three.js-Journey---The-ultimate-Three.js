@@ -21,12 +21,12 @@ const scene = new THREE.Scene()
  */
 const parameters = {}
 parameters.count = 140000
-parameters.size = 0.005
-parameters.radius = 11.2
+parameters.size = 0.5
+parameters.radius = 5
 parameters.branches = 23
 parameters.spin = 1
-parameters.randomness = 0.7
-parameters.randomnessPower = 3
+parameters.randomness = 0.2
+parameters.randomnessPower = 4.5
 parameters.insideColor = '#dd7f13'
 parameters.outsideColor = '#7300ff'
 
