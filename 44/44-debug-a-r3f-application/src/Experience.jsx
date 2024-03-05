@@ -11,7 +11,13 @@ export default function Experience()
                 joystick: 'invertY'
             },
         color: '#ff0000',
-        visible: true
+        visible: true,
+        myInterval:
+            {
+                min: 0,
+                max: 10,
+                value: [4,5]
+            }
     })
 
     return <>
