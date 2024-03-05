@@ -1,4 +1,4 @@
-import {Html, PivotControls, TransformControls, OrbitControls} from "@react-three/drei"
+import {Text, Html, PivotControls, TransformControls, OrbitControls} from "@react-three/drei"
 import {useRef} from "react"
 export default function Experience()
 {
@@ -6,6 +6,18 @@ export default function Experience()
     const sphere = useRef()
 
     return <>
+
+        <Text
+            font="./bangers-v20-latin-regular.woff"
+            fontSize={ 1 }
+            color="salmon"
+            position-y={ 2 }
+            maxWidth={ 2 }
+            textAlign="center"
+        >
+            I LOVE R3F
+        </Text>
+
         <OrbitControls makeDefault />
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
         <ambientLight intensity={ 0.5 } />
@@ -43,6 +55,7 @@ export default function Experience()
             <planeGeometry />
             <meshStandardMaterial color="greenyellow" />
         </mesh>
+
 
     </>
 }
