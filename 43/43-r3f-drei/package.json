@@ -12,9 +12,10 @@
     "vite": "^5.1.4"
   },
   "dependencies": {
+    "@react-three/drei": "^9.99.7",
+    "@react-three/fiber": "^8.15.19",
     "react": "18.2",
     "react-dom": "18.2",
-    "@react-three/fiber": "^8.15.19",
     "three": "^0.162.0"
   }
 }
