@@ -3,13 +3,14 @@ import { useControls } from 'leva'
 
 export default function Experience()
 {
-    const {position} = useControls({
+    const {position, color} = useControls({
         position:
             {
                 value: { x: -2, y: 0},
                 step: 0.01,
                 joystick: 'invertY'
-            }
+            },
+        color: '#ff0000'
     })
 
     return <>
@@ -21,7 +22,7 @@ export default function Experience()
 
         <mesh position={ [position.x, position.y, 0] }>
             <sphereGeometry />
-            <meshStandardMaterial color="orange" />
+            <meshStandardMaterial color={ color } />
         </mesh>
 
         <mesh position-x={ 2 } scale={ 1.5 }>
