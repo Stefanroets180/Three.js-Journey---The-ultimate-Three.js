@@ -1,5 +1,5 @@
 import { useFrame } from '@react-three/fiber'
-import { useHelper, OrbitControls } from '@react-three/drei'
+import { BakeShadows, useHelper, OrbitControls } from '@react-three/drei'
 import React, { useRef } from 'react'
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
@@ -18,6 +18,8 @@ export default function Experience()
 
     return <>
 
+        <BakeShadows />
+
         <color args={['#81D8D0']} attach="background"/>
 
         <Perf position="top-left"/>
@@ -26,7 +28,19 @@ export default function Experience()
 
         //Light Helper
 
-        <directionalLight ref={directionalLight} castShadow position={[1, 2, 3]} intensity={1.5}/>
+        <directionalLight
+            ref={directionalLight}
+            position={[1, 2, 3]}
+            intensity={1.5}
+            castShadow
+            shadow-mapSize={[1024,1024]}
+            shadow-camera-near={ 1 }
+            shadow-camera-far={ 10 }
+            shadow-camera-top={ 5 }
+            shadow-camera-right={ 5 }
+            shadow-camera-bottom={ - 5 }
+            shadow-camera-left={ - 5 }
+        />
         <ambientLight intensity={0.5}/>
 
         <mesh castShadow position-x={-2}>
