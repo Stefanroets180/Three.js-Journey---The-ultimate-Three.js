@@ -7,6 +7,7 @@ import * as THREE from 'three'
 export default function Experience()
 {
     const directionalLight = useRef()
+    //Light Helper (directionalLight,ambientLight,hemisphereLight,pointLight,rectAreaLight,spotLight)
     useHelper(directionalLight, THREE.DirectionalLightHelper, 1)
     const cube = useRef()
     
@@ -22,6 +23,8 @@ export default function Experience()
         <Perf position="top-left"/>
 
         <OrbitControls makeDefault/>
+
+        //Light Helper
 
         <directionalLight ref={directionalLight} position={[1, 2, 3]} intensity={1.5}/>
         <ambientLight intensity={0.5}/>
