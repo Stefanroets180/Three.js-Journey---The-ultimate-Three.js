@@ -2,6 +2,7 @@ import { OrbitControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import Model from './Model.jsx'
 import { Suspense } from 'react'
+import Placeholder from "./Placeholder.jsx";
 
 export default function Experience()
 {
@@ -21,7 +22,8 @@ export default function Experience()
             <meshStandardMaterial color="greenyellow" />
         </mesh>
 
-        <Suspense>
+        <Suspense
+            fallback={<Placeholder position-y={0.5} scale={[2, 3, 2]} />}>
             <Model/>
         </Suspense>
 
