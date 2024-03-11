@@ -1,4 +1,4 @@
-import {useTexture,useGLTF, OrbitControls } from '@react-three/drei'
+import {Center,useTexture,useGLTF, OrbitControls } from '@react-three/drei'
 
 export default function Experience()
 {
@@ -12,8 +12,10 @@ export default function Experience()
 
         <OrbitControls makeDefault/>
 
-        <mesh geometry={nodes.baked.geometry}>
-            <meshBasicMaterial map={ bakedTexture}/>
-        </mesh>
+        <Center>
+            <mesh geometry={nodes.baked.geometry}>
+                <meshBasicMaterial map={bakedTexture}/>
+            </mesh>
+        </Center>
     </>
 }
