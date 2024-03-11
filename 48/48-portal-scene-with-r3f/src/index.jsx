@@ -7,13 +7,15 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 root.render(
     <Canvas
+        flat
         camera={ {
             fov: 45,
             near: 0.1,
-            far: 200,
+            far: 50,
             position: [ 1, 2, 6 ]
         } }
     >
+        <color args={ [ '#030202' ] } attach="background" />
         <Experience />
     </Canvas>
 )
