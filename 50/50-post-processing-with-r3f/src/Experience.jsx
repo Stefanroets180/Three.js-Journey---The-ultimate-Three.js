@@ -31,7 +31,11 @@ export default function Experience()
 
             />*/}
 
-            <DepthOfField/>
+            <DepthOfField
+                focusDistance={ 0.025 }
+                focalLength={ 0.025 }
+                bokehScale={ 6 }
+            />
 
         </EffectComposer>
 
