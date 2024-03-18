@@ -41,7 +41,7 @@ export default function Experience()
 
         <mesh
             ref={ cube }
-            // raycast={ meshBounds }
+             raycast={ meshBounds }
             position-x={ 4 }
             scale={ 1.5 }
             onClick={ eventHandler }
